@@ -11,5 +11,5 @@ module.exports = async (fileContent) => {
     Key: `${awsKey}.png`
   }
   const response= await client.send(new PutObjectCommand(params))
-  return response
+  return {response, awsKey}
 }

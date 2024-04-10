@@ -6,14 +6,16 @@ const file = fs.readFileSync('./img/3419668782265937.png')
 
 
 // const upload = async (file)=>{
-//   const res = await aws.upload(file)
+//   const {response, awsKey} = await aws.upload(file)
+//   console.log(process.env.URL + awsKey + '.png')
 // }
 // upload(file)
 
 // const geturl = async (awsKey)=>{
-//   const res = await aws.getUrl(awskey)
+//   const res = await aws.getUrl(awsKey)
+//   console.log(res);
 // }
-// geturl(awsKey)
+// geturl('8eae2e4f-56a7-44da-bbe3-ca76540e135d')
 
 // const remove = async (awsKey)=>{
 //   const res = await aws.remove(awsKey)
