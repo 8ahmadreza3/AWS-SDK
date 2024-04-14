@@ -2,8 +2,7 @@ require('dotenv').config()
 const fs = require('fs')
 const aws = require('./AWS')
 
-const file = fs.readFileSync('./img/3419668782265937.png')
-
+// const file = fs.readFileSync('./img/3419668782265937.png')
 
 // const upload = async (file)=>{
 //   const {response, awsKey} = await aws.upload(file)
@@ -21,3 +20,10 @@ const file = fs.readFileSync('./img/3419668782265937.png')
 //   const res = await aws.remove(awsKey)
 // }
 // remove(awsKey)
+
+// const filesList = async () => {
+//   const files = await aws.filesList()
+//   console.log(files)
+// }
+
+// filesList()
