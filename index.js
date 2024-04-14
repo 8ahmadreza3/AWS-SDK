@@ -25,5 +25,10 @@ const aws = require('./AWS')
 //   const files = await aws.filesList()
 //   console.log(files)
 // }
-
 // filesList()
+
+// const bucketsList = async () => {
+//   const buckets = await aws.bucketsList()
+//   console.log(buckets);
+// }
+// bucketsList()
