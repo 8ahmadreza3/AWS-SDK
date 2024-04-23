@@ -39,3 +39,11 @@ const aws = require('./AWS')
 //   const response = await aws.customUpload(file, awsKey)
 // }
 // customUpload(file, awsKey)
+
+// const getManyFiles = async (awsKeys) => {
+//   const files = await aws.getManyFiles(awsKeys,(file)=> {
+//     console.log(file)
+//   })
+// }
+
+// getManyFiles(awsKeys)

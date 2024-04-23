@@ -4,7 +4,7 @@ const client = require('../S3')
 module.exports = async (awsKey) => {
   const params = {
     Bucket: process.env.BUCKET_NAME,
-    Key: awsKey
+    Key: `${awsKey}.png`
   }
   const data = await client.send(new GetObjectCommand(params))
   return data.Body
