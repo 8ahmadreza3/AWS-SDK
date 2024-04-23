@@ -42,8 +42,12 @@ const aws = require('./AWS')
 
 // const getManyFiles = async (awsKeys) => {
 //   const files = await aws.getManyFiles(awsKeys,(file)=> {
-//     console.log(file)
 //   })
 // }
-
 // getManyFiles(awsKeys)
+
+// const getManyUrl = async (awsKeys) => {
+//   const urls = await aws.getManyUrl(awsKeys,(url)=> {
+//   })
+// }
+// getManyUrl(awsKeys)
