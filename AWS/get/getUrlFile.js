@@ -1,6 +1,6 @@
 const { GetObjectCommand } = require('@aws-sdk/client-s3')
 const { getSignedUrl } = require('@aws-sdk/s3-request-presigner')
-const client = require('./S3')
+const client = require('../S3')
 
 module.exports = async (awsKey) => {
   const params = {
