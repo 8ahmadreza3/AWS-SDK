@@ -4,6 +4,7 @@ const remove = require('./removeFile')
 const filesList = require('./filesList')
 const bucketsList = require('./bucketsList')
 const getFile = require('./getFile')
+const customUpload = require('./customUpload')
 
 module.exports = {
   upload,
@@ -11,5 +12,6 @@ module.exports = {
   remove,
   filesList,
   bucketsList,
-  getFile
+  getFile,
+  customUpload
 }
