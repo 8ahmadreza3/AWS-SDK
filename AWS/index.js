@@ -9,6 +9,7 @@ const removeMany = require('./remove/removeMany')
 const customUpload = require('./upload/customUpload')
 const uploadMany = require('./upload/uploadMany')
 const upload = require('./upload/uploadFile')
+const { publicUrl, manyPublicUrl } = require('./get/getPublicUrl')
 
 module.exports = {
   upload,
@@ -21,5 +22,7 @@ module.exports = {
   getManyFiles,
   uploadMany,
   removeMany,
-  getManyUrl
+  getManyUrl,
+  publicUrl,
+  manyPublicUrl
 }
