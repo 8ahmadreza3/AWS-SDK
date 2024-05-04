@@ -6,7 +6,7 @@ ENDPOINT=
 BUCKET_NAME=
 ACCESS_KEY=
 SECRET_KEY=
-URL=
+BUCKET_URL=
 ```
 Installing packages with
 ```console
@@ -22,84 +22,84 @@ const aws = require('./AWS')
 ```js
 const upload = async (file)=>{
   const {response, awsKey} = await aws.upload(file)
+  // or await aws.upload(file, callback)
 }
-upload(file)
 ```
 - remove file
 ```js
 const remove = async (awsKey)=>{
   const res = await aws.remove(awsKey)
+  // or await aws.remove(awsKey, callback)
 }
-remove(awsKey)
 ```
 - get file
 ```js
 const geturl = async (awsKey)=>{
-  const res = await aws.getUrl(awsKey)
+  const res = await aws.getFile(awsKey)
+  // or await aws.getFile(awsKey, callback)
 }
-geturl(awsKey)
 ```
 - get file url
 ```js
 const geturl = async (awsKey)=>{
   const res = await aws.getUrl(awsKey)
+  // or await aws.getUrl(awsKey, callback)
 }
-geturl(awsKey)
 ```
 - files list 
 ```js
 const filesList = async () => {
   const files = await aws.filesList()
+  // or await aws.filesList(callback)
 }
-filesList()
 ```
 - buckets list
 ```js
 const bucketsList = async () => {
   const buckets = await aws.bucketsList()
+  // or await aws.bucketsList(callback)
 }
-bucketsList()
 ```
 - upload with custom awsKey 
 ```js
 const customUpload = async (file, awsKey) => {
   const response = await aws.customUpload(file, awsKey)
+  // or await aws.customUpload(file, awsKey, callback)
 }
-customUpload(file, awsKey)
 ```
 - get many files
 ```js
 const getManyFiles = async (awsKeys) => {
-  const files = await aws.getManyFiles(awsKeys,(file)=> {
-    console.log(file); // do something with the file info
-  })
+  await aws.getManyFiles(awsKeys, callback)
 }
-getManyFiles(awsKeys)
 ```
 - upload many files
 ```js
 const uploadMany = async (files) => {
-  const files = await aws.uploadMany(files,(res)=> {
-    console.log(res); // do something with the responses
-  })
+  await aws.uploadMany(files, callback)
 }
-uploadMany(files)
 ```
 - remove many files
 ```js
 const removeMany = async (awsKeys) => {
-  const res = await aws.removeMany(awsKeys,(res)=> {
-    console.log(res); // do something with the responses
-  })
+  await aws.removeMany(awsKeys, callback)
 }
-removeMany(awsKeys)
 ```
 - get many url
 ```js
 const getManyUrl = async (awsKeys) => {
-  const urls = await aws.getManyUrl(awsKeys,(url)=> {
-      console.log(url); // do something with the url
-  })
+  await aws.getManyUrl(awsKeys, callback)
 }
-getManyUrl(awsKeys)
+```
+- get public url
+```js
+const getPublicUrl = async (awsKeys) => {
+  const url = await aws.publicUrl(awsKeys)
+}
+```
+- get many public urls
+```js
+const getManyPublicUrl = async (awsKeys) => {
+  const urls = await aws.manyPublicUrl(awsKeys)
+}
 ```
