@@ -9,6 +9,7 @@
   },
   "author": "AhmadReza",
   "license": "ISC",
+  "git repository": "https://github.com/8ahmadreza3/AWS-SDK",
   "dependencies": {
     "@aws-sdk/client-s3": "^3.550.0",
     "@aws-sdk/s3-request-presigner": "^3.550.0",

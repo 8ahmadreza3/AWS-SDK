@@ -1,6 +1,6 @@
 require('dotenv').config()
-const fs = require('fs')
 const aws = require('./AWS')
+// const fs = require('fs')
 
 // const awsKey = ''
 // const file = fs.readFileSync('')
