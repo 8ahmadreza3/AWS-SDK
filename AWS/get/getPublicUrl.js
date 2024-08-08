@@ -1,10 +1,10 @@
-module.exports.publicUrl = (awsKey) => {
-  return process.env.BUCKET_URL + awsKey + '.png'
+module.exports.publicUrl = (configs, awsKey) => {
+  return configs.bucketURL + awsKey + '.png'
 }
 
-module.exports.manyPublicUrl = (awsKeys) => {
+module.exports.manyPublicUrl = (configs, awsKeys) => {
   awsKeys = awsKeys.map((awsKey) => {
-    return process.env.BUCKET_URL + awsKey + '.png'
+    return configs.bucketURL + awsKey + '.png'
   })
   return awsKeys
 }

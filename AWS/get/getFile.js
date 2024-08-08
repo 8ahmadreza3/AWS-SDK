@@ -1,12 +1,11 @@
 const { S3Client, GetObjectCommand } = require("@aws-sdk/client-s3")
-const client = require('../S3')
 
-module.exports = async (awsKey, callback) => {
+module.exports = async (configs, awsKey, callback) => {
   const params = {
-    Bucket: process.env.BUCKET_NAME,
+    Bucket: configs.bucketName,
     Key: `${awsKey}.png`
   }
-  const data = await client.send(new GetObjectCommand(params))
+  const data = await configs.client.send(new GetObjectCommand(params))
   callback && callback(data.Body)
   return data.Body
 }

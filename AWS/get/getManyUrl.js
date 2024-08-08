@@ -1,8 +1,8 @@
 const getUrl = require('./getUrl')
 
-module.exports = (awsKeys, callback) => {
+module.exports = (configs, awsKeys, callback) => {
   const urls = awsKeys.map(async (awsKey) => {
-    const url = await getUrl(awsKey)
+    const url = await getUrl(configs, awsKey)
     callback && callback(url)
     return url
   })
