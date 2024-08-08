@@ -1,8 +1,7 @@
-const { S3Client, ListBucketsCommand } = require("@aws-sdk/client-s3")
-const client = require('../S3')
+const {ListBucketsCommand} = require("@aws-sdk/client-s3")
 
-module.exports = async (callback) => {
-  const data = await client.send(new ListBucketsCommand({}))
+module.exports = async (configs, callback) => {
+  const data = await configs.client.send(new ListBucketsCommand({}))
   callback && callback(data)
   return data.Buckets
 }
