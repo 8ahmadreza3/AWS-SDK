@@ -1,8 +1,8 @@
 const removeFile = require('./removeFile')
 
-module.exports = (awsKeys, callback) => {
+module.exports = (configs, awsKeys, callback) => {
   const responses = awsKeys.map(async (awsKey) => {
-    const response = await removeFile(awsKey)
+    const response = await removeFile(configs, awsKey)
     callback && callback(response)
     return response
   })
