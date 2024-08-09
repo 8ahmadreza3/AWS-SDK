@@ -1,8 +1,8 @@
 const uploadFile = require('./uploadFile')
 
-module.exports = (fileContents, callback) => {
+module.exports = (configs, fileContents, callback) => {
   const responses = fileContents.map(async (fileContent) => {
-    const response = await uploadFile(fileContent)
+    const response = await uploadFile(configs, fileContent)
     callback && callback(response)
     return response
   })
